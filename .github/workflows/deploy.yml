@@ -18,5 +18,6 @@ jobs:
             git checkout main
             git pull origin main
             node -v
+            sudo apt install npm
             npm -v
             
