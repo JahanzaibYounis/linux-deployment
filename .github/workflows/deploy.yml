@@ -15,5 +15,5 @@ jobs:
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            sudo timedatectl set-timezone America/Argentina/Buenos_Aires
+            sudo timedatectl set-timezone Asia/Karachi
             
