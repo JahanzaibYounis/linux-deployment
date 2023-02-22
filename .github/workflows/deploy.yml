@@ -7,13 +7,16 @@ jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - uses: appleboy/ssh-action@master
-#       - uses: actions/setup-node@v3
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@master
         with:
-#           node-version: 16
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            sudo timedatectl set-timezone Asia/Karachi
+            cd linux-deployment
+            git checkout main
+            git pull origin main
+            npm install
+            npm run build
             
