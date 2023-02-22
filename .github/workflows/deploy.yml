@@ -16,5 +16,5 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: 22
           script: |
-            cd linux-deployment
+            sudo timedatectl set-timezone America/Argentina/Buenos_Aires
             
