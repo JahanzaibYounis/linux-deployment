@@ -13,10 +13,10 @@ jobs:
           host: ${{ secrets.HOST }}
           username: ${{ secrets.USERNAME }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: 22
           script: |
             cd linux-deployment
             git checkout main
             git pull origin main
             node -v
-            yarn build
             
