@@ -18,5 +18,8 @@ jobs:
             cd linux-deployment
             git checkout main
             git pull origin main
-            node -v
+            export NVM_DIR=~/.nvm
+            source ~/.nvm/nvm.sh
+            npm install
+            npm run build
             
