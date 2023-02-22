@@ -22,4 +22,5 @@ jobs:
             source ~/.nvm/nvm.sh
             npm install
             npm run build
+            scp -r ./dist/* /var/www/app.com/
             
